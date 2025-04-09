@@ -11,7 +11,7 @@ Hooks.once("ready", () => {
 Hooks.on("getSceneControlButtons", (controls) => {
   heraldKopi_tooltipButton = game.settings.get("herald-kopi", "tooltipSetting");
   heraldKopi_linkUrlTab = game.settings.get("herald-kopi", "urlSetting");
-  if (!game.user.isGM) return;
+  if (game.user.isGM) return;
   const tokenControls = controls.find((control) => control.name === "token");
   if (tokenControls) {
     tokenControls.tools.push({
