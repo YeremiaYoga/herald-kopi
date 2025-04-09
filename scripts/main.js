@@ -35,6 +35,7 @@ Hooks.on("init", () => {
     config: true,
     type: String,
     default: heraldKopi_tooltipButton,
+    restricted: true,
     onChange: (value) => {
       if (game.user.isGM) {
         heraldKopi_tooltipButton = value;
@@ -50,6 +51,7 @@ Hooks.on("init", () => {
     config: true,
     type: String,
     default: heraldKopi_linkUrlTab,
+    restricted: true,
     onChange: (value) => {
       if (game.user.isGM) {
         heraldKopi_linkUrlTab = value;
